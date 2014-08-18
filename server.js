@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 
 var app = express();
+
 app.use(bodyParser.json());
 
 var count = 10;
@@ -37,6 +38,10 @@ app.get('/grubs/random', function(req, res) {
   res.json(grub);
 });
 
+app.get('/grubs/all', function(req, res) {
+  res.json(grubs);
+});
+
 app.get('/grubs/count', function(req,res) {
   res.json({
     count:count,
@@ -48,7 +53,8 @@ app.get('/grubs/add/:num', function(req, res) {
   count += parseInt(req.params.num);
   res.json({
     add: req.params.num,
-    message: 'YAY! You just added ' + req.params.num + ' new grubs!'
+    message: 'YAY! You just added ' + req.params.num + ' new grubs!',
+    count:count
   });
 });
 

@@ -9,30 +9,40 @@ describe('grubRoutes', function() {
 
   it('gets a random grub', function (done) {
     chai.request(url)
-      .get('/grub/random')
+      .get('/grubs/random')
       .res(function(res) {
         expect(res).to.have.status(200);
-        expect(Array.isArray(res.body)).to.be.true;
-        expect(res.body[0]).to.have.property('grub');
+        expect(res.body).to.have.property('grub');
+        done();
+      });
+  });
+
+  it('gets Wy', function (done) {
+    chai.request(url)
+      .get('/grubs/all')
+      .res(function(res) {
+        expect(res).to.have.status(200);
+        expect(res.body[0].grub).to.eql('Wy');
         done();
       });
   });
 
   it('checks if the count is a number', function (done) {
     chai.request(url)
+    .get('/grubs/count')
     .res(function(res) {
       expect(res).to.have.status(200);
-      expect(grubs.count).to.be.a('number');
+      expect(res.body.count).to.be.a('number');
       done();
     });
   });
 
   it('should update the grub count', function (done) {
     chai.request(url)
-      .post('/grub/count/1')
+      .get('/grubs/add/1')
       .res(function(res) {
         expect(res).to.have.status(200);
-        expect(grubs.count).to.eql(11);
+        expect(res.body.count).to.eql(11);
         done();
       });
   });
