@@ -7,6 +7,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var http = require('http');
 
+var app = express();
 app.use(bodyParser.json());
 
 var count = 10;
@@ -51,4 +52,5 @@ app.get('/grubs/add/:num', function(req, res) {
   });
 });
 
+var server = http.createServer(app);
 app.listen(process.env.PORT || 3000);
