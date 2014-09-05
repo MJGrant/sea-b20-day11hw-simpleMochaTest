@@ -53,8 +53,8 @@ app.get('/grubs/add/:num', function(req, res) {
   count += parseInt(req.params.num);
   res.json({
     add: req.params.num,
-    message: 'YAY! You just added ' + req.params.num + ' new grubs!',
-    count:count
+    count:count,
+    message: 'YAY! You just added ' + req.params.num + ' new grubs!'
   });
 });
 
