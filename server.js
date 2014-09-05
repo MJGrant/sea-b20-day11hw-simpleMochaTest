@@ -1,5 +1,5 @@
 //Simple JSON database app
-//To use: 
+//To use:
 //$ server.js
 
 var express = require('express');
@@ -45,7 +45,7 @@ app.get('/grubs/all', function(req, res) {
 app.get('/grubs/count', function(req,res) {
   res.json({
     count:count,
-    message: "Wow, there are " + count + ' grubs!'
+    message: 'Wow, there are ' + count + ' grubs!'
   });
 });
 
