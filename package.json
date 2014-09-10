@@ -1,0 +1,29 @@
+{
+  "name": "sea-b20-day11hw-simpleMochaTest",
+  "version": "1.0.0",
+  "description": "simple mocha test project",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MJGrant/sea-b20-day11hw-simpleMochaTest.git"
+  },
+  "author": "mjgrant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MJGrant/sea-b20-day11hw-simpleMochaTest/issues"
+  },
+  "homepage": "https://github.com/MJGrant/sea-b20-day11hw-simpleMochaTest",
+  "devDependencies": {
+    "body-parser": "^1.6.5",
+    "chai": "^1.9.1",
+    "chai-http": "^0.4.0",
+    "mocha": "^1.21.4"
+  }
+}
