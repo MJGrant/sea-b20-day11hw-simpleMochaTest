@@ -1,5 +1,6 @@
 sea-b20-day11hw-simpleMochaTest
 ===============================
+[![Build Status](https://travis-ci.org/MJGrant/sea-b20-day11hw-simpleMochaTest.svg?branch=master)](https://travis-ci.org/MJGrant/sea-b20-day11hw-simpleMochaTest)
 
 Simple Mocha test to complete Day 11 homework assignment. To use this app:
 
