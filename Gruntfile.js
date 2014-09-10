@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+  grunt.loadNpmTasks('grunt-simple-mocha');
 
 // Project configuration.
   grunt.initConfig({
@@ -8,14 +9,17 @@ module.exports = function(grunt) {
       }
     },
 
-    test: {
+    simplemocha: {
       options: {
-        debug: true
+        globals: ['should'],
+        timeout: 3000,
+        ignoreLeaks: false,
+        ui: 'bdd',
+        reporter: 'tap'
       },
-      src: ['test/mocha/backbone/**/*.js'],
-      }
-    });
+      all: { src: 'tests/mocha/*.js' }
+    }
+  });
 
-  grunt.registerTask('test', ['test']);
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('test', ['simplemocha']);
 };
