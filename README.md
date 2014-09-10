@@ -19,3 +19,5 @@ Open a web browser and enter these routes:
 To test, run
 
 ```$ mocha tests/mocha/simple-mocha-tests.js```
+
+Now with Travis!
