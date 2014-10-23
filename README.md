@@ -2,9 +2,15 @@ sea-b20-day11hw-simpleMochaTest
 ===============================
 [![Build Status](https://travis-ci.org/MJGrant/sea-b20-day11hw-simpleMochaTest.svg?branch=master)](https://travis-ci.org/MJGrant/sea-b20-day11hw-simpleMochaTest)
 
-Simple Mocha test to complete Day 11 homework assignment. To use this app:
+Simple Mocha test to complete Day 11 homework assignment. 
 
-Navigate to the project in Terminal and type
+To use this app:
+
+Navigate to the project in Terminal and run
+
+```$ npm install```
+
+Then start up your server:
 
 ```$ nodemon server.js```
 
